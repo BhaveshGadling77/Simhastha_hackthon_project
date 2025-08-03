@@ -11,7 +11,7 @@ function Navbar() {
                             <a href="/">
                                 <img src="../../images/Saarthi-logo-transparent.png" alt="Saarthi Logo" className='h-12'/>
                             </a>
-                            <p className='ml-6 font-bold text-2xl text-center mt-3' id='Name'>Saarthi</p> 
+                            <p className='ml-6 font-bold text-2xl text-center text-white' id='Name'>Saarthi</p> 
                         </div>
                     </div>
                     <div className='flex flex-col lg:flex-row lg:mx-1 lg:backdrop-blur-none lg:backdrop-brightness-100 py-2 lg:py-0 font-bold gap-2 mt-6 md:mt-8 lg:mt-0 lg:bg-transparent px-4 rounded-xl space-x-10 text-teal-50'> 
