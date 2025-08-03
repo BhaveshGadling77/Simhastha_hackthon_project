@@ -11,14 +11,16 @@ function Navbar() {
                             <a href="/">
                                 <img src="../../images/Saarthi-logo-transparent.png" alt="Saarthi Logo" className='h-12'/>
                             </a>
+                            <p className='ml-6 font-bold text-lg text-white'>Saarthi</p> 
                         </div>
                     </div>
-                    <div className='flex flex-col lg:flex-row lg:mx-1 lg:backdrop-blur-none lg:backdrop-brightness-100 py-2 lg:py-0 text-lg font-semibold gap-2 mt-6 md:mt-8 lg:mt-0 lg:bg-transparent px-4 rounded-xl space-x-10 text-teal-50'> 
-                        <a href="">Sponsors</a>
-                        <a href=''> About</a>
-                        <a href=''>Login / SignUp</a>
+                    <div className='flex flex-col lg:flex-row lg:mx-1 lg:backdrop-blur-none lg:backdrop-brightness-100 py-2 lg:py-0 font-bold gap-2 mt-6 md:mt-8 lg:mt-0 lg:bg-transparent px-4 rounded-xl space-x-10 text-teal-50'> 
+                        <a href="" className='text-lg'>Sponsors</a>
+                        <a href='' className='text-lg'> About</a>
+                        <a href='' className='text-lg'>Login / SignUp</a>
                     </div>
                 </div>
+
             </div>
         </nav>
     )
