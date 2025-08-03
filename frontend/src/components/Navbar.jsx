@@ -12,12 +12,11 @@ function Navbar() {
                                 <img src="../../images/favicon.jpeg" alt="file" className='h-12'/>
                             </a>
                         </div>
-
                     </div>
-                    <div className='flex flex-col lg:flex-row lg:mx-1 lg:backdrop-blur-none lg:backdrop-brightness-100 py-2 lg:py-0 text-lg font-semibold gap-2 mt-6 md:mt-8 lg:mt-0 lg:bg-transparent px-4 rounded-xl'> 
+                    <div className='flex flex-col lg:flex-row lg:mx-1 lg:backdrop-blur-none lg:backdrop-brightness-100 py-2 lg:py-0 text-lg font-semibold gap-2 mt-6 md:mt-8 lg:mt-0 lg:bg-transparent px-4 rounded-xl space-x-10 text-teal-50'> 
                         <a href="">Sponsors</a>
                         <a href=''> About</a>
-                        <a href=''>Login/SignUp</a>
+                        <a href=''>Login / SignUp</a>
                     </div>
                 </div>
             </div>
