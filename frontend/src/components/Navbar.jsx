@@ -3,14 +3,23 @@ import React, { useState } from 'react';
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     return(
-        <nav className="bg-navBgC p-4">
-            <div className='inline-block'>
-               
-            </div> <img src="../../images/favicon.jpeg" alt="image" className='h-12'/>
-            <div className="container mx-auto flex items-start justify-end space-x-10 text-white">
-                <a href="" className='font-bold'>Sponsers</a>
-                <a href="" className='font-bold'>About</a>
-                <a href="" className='font-bold'>Login/SignUp</a>
+        <nav className="bg-navBgC fixed w-screen z-50 backdrop-blur-2xl shadow-sm border-b-[1px] ">
+            <div className='w-full lg:w-4/5 container px-6 py-2 md:py-4 mx-auto'>
+                <div className='flex flex-col lg:flex-row lg:justify-between lg:items-center'>
+                    <div className='flex items-center justify-between'>
+                        <div className='flex items-center'>
+                            <a href="/">
+                                <img src="../../images/favicon.jpeg" alt="file" className='h-12'/>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div className='flex flex-col lg:flex-row lg:mx-1 lg:backdrop-blur-none lg:backdrop-brightness-100 py-2 lg:py-0 text-lg font-semibold gap-2 mt-6 md:mt-8 lg:mt-0 lg:bg-transparent px-4 rounded-xl'> 
+                        <a href="">Sponsors</a>
+                        <a href=''> About</a>
+                        <a href=''>Login/SignUp</a>
+                    </div>
+                </div>
             </div>
         </nav>
     )
