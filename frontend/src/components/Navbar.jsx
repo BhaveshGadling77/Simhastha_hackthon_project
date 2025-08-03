@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
+
     return(
         <nav className="bg-navBgC fixed w-screen z-50 backdrop-blur-2xl shadow-sm border-b-[1px] ">
             <div className='w-full lg:w-4/5 container px-6 py-2 md:py-4 mx-auto'>
@@ -9,7 +9,7 @@ function Navbar() {
                     <div className='flex items-center justify-between'>
                         <div className='flex items-center'>
                             <a href="/">
-                                <img src="../../images/favicon.jpeg" alt="file" className='h-12'/>
+                                <img src="../../images/Saarthi-logo-transparent.png" alt="Saarthi Logo" className='h-12'/>
                             </a>
                         </div>
                     </div>
