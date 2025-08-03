@@ -20,7 +20,6 @@ function Navbar() {
                         <a href='' className='text-lg'>Login / SignUp</a>
                     </div>
                 </div>
-
             </div>
         </nav>
     )
