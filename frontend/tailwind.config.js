@@ -8,7 +8,10 @@ export default {
     extend: {
       colors: {
         'navBgC':'rgb(104, 133, 111)'
-      }
+      },
+      // font:{
+      //   'Headling':'Cedarville'
+      // }
     },
   },
   plugins: [],

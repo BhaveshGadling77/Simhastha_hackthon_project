@@ -8,7 +8,12 @@
     font-family: Roboto, Arial;
     font-size: large;
 }
-
+/* body {
+    background-color: rgb(104, 133, 111);
+} */
 #Name {
     font-family: "Dancing Script", cursive, Arial;
+}
+#tagline{
+    font-family: "Great Vibes", cursive;
 }

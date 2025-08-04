@@ -9,8 +9,8 @@ function App() {
 
   return (
     <>
-    <Navbar/>
-    <Tagline></Tagline>
+    <Navbar />
+    <Tagline />
     
     </>
 
