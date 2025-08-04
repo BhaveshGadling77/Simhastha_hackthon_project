@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 function Navbar() {
 
     return(
-        <nav className="bg-navBgC fixed w-screen z-50 backdrop-blur-2xl shadow-sm border-b-[1px] ">
+        <nav className="bg-navBgC w-screen z-50 backdrop-blur-sm fixed shadow-sm border-b-[1px]">
             <div className='w-full lg:w-4/5 container px-6 py-2 md:py-4 mx-auto'>
                 <div className='flex flex-col lg:flex-row lg:justify-between lg:items-center'>
                     <div className='flex items-center justify-between'>
@@ -14,7 +14,7 @@ function Navbar() {
                             <p className='ml-6 font-bold text-2xl text-center text-white' id='Name'>Saarthi</p> 
                         </div>
                     </div>
-                    <div className='flex flex-col lg:flex-row lg:mx-1 lg:backdrop-blur-none lg:backdrop-brightness-100 py-2 lg:py-0 font-bold gap-2 mt-6 md:mt-8 lg:mt-0 lg:bg-transparent px-4 rounded-xl space-x-10 text-teal-50'> 
+                    <div className='flex flex-col lg:flex-row lg:mx-1 lg:backdrop-blur-none lg:backdrop-brightness-100 py-2 lg:py-0 font-bold gap-2 mt-6 md:mt-8 lg:mt-0 px-4 space-x-10 text-teal-50'> 
                         <a href="" className='text-lg'>Sponsors</a>
                         <a href='' className='text-lg'> About</a>
                         <a href='' className='text-lg'>Login / SignUp</a>

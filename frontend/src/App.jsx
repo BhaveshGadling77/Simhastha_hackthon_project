@@ -3,14 +3,17 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './components/Navbar'
+import Tagline from './components/Tagline'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
     <Navbar/>
-    <p className='text-black font-extrabold'>somthin</p>
+    <Tagline></Tagline>
+    
     </>
+
   )
 }
 
