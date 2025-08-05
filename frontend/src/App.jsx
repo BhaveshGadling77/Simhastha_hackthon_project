@@ -5,6 +5,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Tagline from "./components/Tagline";
 import Feature from "./components/feature";
+import Footer from "./components/footer";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -17,6 +18,9 @@ function App() {
       <Feature />
       <Feature />
       </div> 
+    <br />
+    <br />
+      <Footer />
     </>
   );
 }
