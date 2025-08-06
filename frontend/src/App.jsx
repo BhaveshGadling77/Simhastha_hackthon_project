@@ -11,16 +11,18 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <Tagline />
-     <div className="space-x-9 justify-center align-middle text-center">
-      <Feature />
-      <Feature />
-      <Feature />
-      </div> 
-    <br />
-    <br />
-      <Footer />
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <Tagline />
+        <div className="space-x-9 justify-center align-middle text-center">
+          <Feature />
+          <Feature />
+          <Feature />
+        </div>
+        <br />
+        <br />
+        <Footer />
+      </div>
     </>
   );
 }
