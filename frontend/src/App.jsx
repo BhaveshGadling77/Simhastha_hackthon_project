@@ -55,7 +55,16 @@ function App() {
         </div>
         <br />
         <br />
+        
+        <div className="columns-1 space-x-4">
         <ReviewCard props={Review}/>
+        <ReviewCard props={Review}/>
+        <ReviewCard props={Review}/>
+        <ReviewCard props={Review}/>
+        <ReviewCard props={Review}/>
+        <ReviewCard props={Review}/>
+        <ReviewCard props={Review}/>
+        </div>
         <Footer />
       </div>
     </>
