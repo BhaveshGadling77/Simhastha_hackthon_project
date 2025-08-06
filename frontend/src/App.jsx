@@ -5,9 +5,43 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Tagline from "./components/Tagline";
 import Feature from "./components/feature";
+import ReviewCard from "./components/ReviewCard";
 import Footer from "./components/footer";
 function App() {
   const [count, setCount] = useState(0);
+  const [Review, setReview] = useState([{
+      id: 1,
+      name: "Sarah Johnson",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=sarah",
+      rating: 5,
+      review:
+        "This product exceeded my expectations! The quality is outstanding and the customer service was excellent.",
+    },
+    {
+      id: 2,
+      name: "Michael Chen",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=michael",
+      rating: 4,
+      review:
+        "Great value for money. Would definitely recommend to others looking for a reliable solution.",
+    },
+    {
+      id: 3,
+      name: "Emma Davis",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=emma",
+      rating: 5,
+      review:
+        "Absolutely love it! The features are exactly what I needed, and it's so easy to use.",
+    },
+    {
+      id: 4,
+      name: "James Wilson",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=james",
+      rating: 4,
+      review:
+        "Very impressed with the quality and attention to detail. A fantastic product overall.",
+    },
+  ])
 
   return (
     <>
@@ -21,6 +55,7 @@ function App() {
         </div>
         <br />
         <br />
+        <ReviewCard props={Review}/>
         <Footer />
       </div>
     </>
