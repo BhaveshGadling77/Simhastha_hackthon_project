@@ -9,7 +9,7 @@ function Navbar() {
                     <div className='flex items-center justify-between'>
                         <div className='flex items-center'>
                             <a href="/">
-                                <img src="/public/images/Saarthi-logo-transparent.png" alt="Saarthi Logo" className='h-12'/>
+                                <img src="/images/Saarthi-logo-transparent.png" alt="Saarthi Logo" className='h-12'/>
                             </a>
                             <p className='ml-6 font-bold text-2xl text-center text-white' id='Name'>Saarthi</p> 
                         </div>
