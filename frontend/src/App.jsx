@@ -2,11 +2,17 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import  {createBrowserRouter, Router, RouterProvider, Link} from 'react-router-dom'
 import Navbar from "./components/Navbar";
 import Tagline from "./components/Tagline";
 import Feature from "./components/feature";
 import ReviewCard from "./components/ReviewCard";
 import Footer from "./components/footer";
+import DashBoard from "./components/DashBoard/main";
+import LoginPage from "./components/LoginPage/main";
+import About from "./components/About/About";import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
+
+
 function App() {
   const [count, setCount] = useState(0);
   const [Review, setReview] = useState([{
@@ -42,13 +48,20 @@ function App() {
         "Very impressed with the quality and attention to detail. A fantastic product overall.",
     },
   ])
-
+  const router = createBrowserRouter([
+    {path:"/", element:<App/>},
+    {path:"/dashboard",element:<DashBoard />},
+    {path:"/loginpage", element:<LoginPage/>},
+    {path:"/about", element: <About/>}, 
+    {path:"*", element:<NotFoundPage/>}
+])
   return (
     <>
       <div className="min-h-screen flex flex-col">
         <Navbar />
+        <RouterProvider router={router}/>
         <Tagline />
-        <div className="space-x-9 justify-center align-middle text-center">
+        <div className="justify-center align-middle text-center">
           <Feature />
           <Feature />
           <Feature />

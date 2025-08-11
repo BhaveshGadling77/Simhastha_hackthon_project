@@ -15,9 +15,9 @@ function Navbar() {
                         </div>
                     </div>
                     <div className='flex flex-col lg:flex-row lg:mx-1 lg:backdrop-blur-none lg:backdrop-brightness-100 py-2 lg:py-0 font-bold gap-2 mt-6 md:mt-8 lg:mt-0 px-4 space-x-10 text-teal-50'> 
-                        <a href="" className='text-lg'>Sponsors</a>
-                        <a href='' className='text-lg'> About</a>
-                        <a href='' className='text-lg'>Login / SignUp</a>
+                        <a href="/dashboard" className='text-lg'>Sponsors</a>
+                        <a href='/about' className='text-lg'> About</a>
+                        <a href='/loginpage' className='text-lg'>Login / SignUp</a>
                     </div>
                 </div>
             </div>
