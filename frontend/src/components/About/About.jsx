@@ -1,6 +1,6 @@
 function About() {
     return (
-        <div>
+        <div className="mt-40">
             this will be the About components
         </div>
     )

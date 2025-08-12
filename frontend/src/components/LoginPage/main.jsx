@@ -2,7 +2,7 @@ import React from "react";
 
 function LoginPage() {
     return (
-        <div>This will be loginpage</div>
+        <div className="max-w-96 max-h-96">This will be loginpage</div>
     )
 }
 

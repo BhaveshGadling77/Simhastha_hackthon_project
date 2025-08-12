@@ -1,6 +1,6 @@
 function DashBoard() {
     return (
-        <div>
+        <div className="mt-96">
             DashBoard Page is this.
         </div>
     )
