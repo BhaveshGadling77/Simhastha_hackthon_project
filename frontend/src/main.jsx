@@ -12,8 +12,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
   const Router = createBrowserRouter([
     {
       path: "/",
-      element: <Layout />,
+      element: <Layout/>,
       children: [
+        {
+          path:"",
+          element:<App/>
+        },
         {
           path: "about",
           element: <About />
@@ -25,7 +29,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
         {
           path: "*",
           element: <NotFoundPage />
-        },
+        }
       ],
     },
   ]);

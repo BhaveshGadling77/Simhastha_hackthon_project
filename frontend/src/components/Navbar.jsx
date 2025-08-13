@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Link } from 'react-router';
 function Navbar() {
 
     return(
@@ -8,16 +8,18 @@ function Navbar() {
                 <div className='flex flex-col lg:flex-row lg:justify-between lg:items-center'>
                     <div className='flex items-center justify-between'>
                         <div className='flex items-center'>
-                            <a href="/">
+                            <Link to="/">
                                 <img src="/images/Saarthi-logo-transparent.png" alt="Saarthi Logo" className='h-12'/>
-                            </a>
-                            <p className='ml-6 font-bold text-2xl text-center text-white' id='Name'>Saarthi</p> 
+                            </Link>
+                            <Link>
+                            <p className='ml-6 font-bold text-2xl text-center text-white' id='Name'>Saarthi</p>
+                            </Link> 
                         </div>
                     </div>
-                    <div className='flex flex-col lg:flex-row lg:mx-1 lg:backdrop-blur-none lg:backdrop-brightness-100 py-2 lg:py-0 font-bold gap-2 mt-6 md:mt-8 lg:mt-0 px-4 space-x-10 text-teal-50'> 
-                        <a href="/dashboard" className='text-lg'>Sponsors</a>
-                        <a href='/about' className='text-lg'> About</a>
-                        <a href='/loginpage' className='text-lg'>Login / SignUp</a>
+                    <div className='flex flex-c lg:mx-1 lg:backdrop-blur-none lg:backdrop-brightness-100 py-2 lg:py-0 font-bold gap-2 mt-6 md:mt-8 lg:mt-0 px-4 space-x-10 text-teal-50'> 
+                        <Link to="/dashboard" className='text-lg'>Sponsors</Link>
+                        <Link to='/about' className='text-lg'> About</Link>
+                        <Link to='/loginpage' className='text-lg'>Login / SignUp</Link>
                     </div>
                 </div>
             </div>

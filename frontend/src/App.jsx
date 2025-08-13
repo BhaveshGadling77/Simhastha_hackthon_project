@@ -3,9 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import {
-  Router,
-  RouterProvider,
-  Link,
+  Router
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Tagline from "./components/Tagline";
@@ -49,10 +47,9 @@ function App() {
     },
   ]);
   return (
-    <Router>
+    <>
       <div className="min-h-screen flex flex-col">
         <Navbar />
-        <RouterProvider router={router} />
         <Tagline />
         <div className="justify-center align-middle text-center">
           <Feature />
@@ -73,7 +70,7 @@ function App() {
         </div>
       </div>
       <Footer />
-    </Router>
+    </>
   );
 }
 
