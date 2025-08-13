@@ -21,6 +21,8 @@ function Navbar() {
                         <Link to='/about' className='text-lg'> About</Link>
                         <Link to='/loginpage' className='text-lg'>Login / SignUp</Link>
                     </div>
+                    {/* dropDown menu */}
+                    
                 </div>
             </div>
         </nav>
