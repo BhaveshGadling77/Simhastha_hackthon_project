@@ -69,7 +69,6 @@ function App() {
           <ReviewCard props={Review} />
         </div>
       </div>
-      <Footer />
     </>
   );
 }

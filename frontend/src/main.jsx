@@ -3,6 +3,7 @@ import React from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
+import LoginPage from './components/LoginPage/main.jsx'
 import About from './components/About/About.jsx'
 import Layout from './layout.jsx'
 import DashBoard from './components/DashBoard/main.jsx'
@@ -27,11 +28,15 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
           element: <DashBoard />
         },
         {
-          path: "*",
-          element: <NotFoundPage />
-        }
+          path:"loginpage",
+          element:<LoginPage/>
+        },
       ],
     },
+    {
+          path: "*",
+          element: <NotFoundPage />
+    }
   ]);
 createRoot(document.getElementById('root')).render(
   <StrictMode>
