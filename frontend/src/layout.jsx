@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/footer";
 import Tagline from "./components/Tagline";
 import App from "./App";
+import NavigationBar from "./components/Navbar/NavigationBar";
 function Layout() {
   return (
     <>

@@ -9,9 +9,12 @@ export default {
       colors: {
         'navBgC':'rgb(104, 133, 111)'
       },
-      // font:{
-      //   'Headling':'Cedarville'
-      // }
+      screens: {
+        'sm': '640px',
+        'md': '700px', // changed from 768px to 700px
+        'lg': '1024px',
+        'xl': '1280px',
+      },
     },
   },
   plugins: [],
