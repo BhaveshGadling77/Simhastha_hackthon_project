@@ -10,7 +10,6 @@ import Tagline from "./components/Tagline";
 import Feature from "./components/feature";
 import ReviewCard from "./components/ReviewCard";
 import Footer from "./components/footer";
-import NavigationBar from "./components/Navbar/NavigationBar";
 function App() {
   const [count, setCount] = useState(0);
   const [Review, setReview] = useState([
