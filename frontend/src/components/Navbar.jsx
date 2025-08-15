@@ -7,7 +7,7 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-navBgC w-screen z-50 backdrop-blur-sm fixed shadow-sm border-b-[1px] opacity-80">
+    <> <nav className="bg-navBgC w-screen z-50 backdrop-blur-sm fixed shadow-sm border-b-[1px] opacity-80">
       <div className="w-full lg:w-4/5 container px-6 py-2 md:py-4 mx-auto">
         <div className="flex flex-row justify-between items-center">
           {/* Logo and Name - always visible */}
@@ -49,28 +49,32 @@ function Navbar() {
               onClick={() => setMenuOpen(!menuOpen)}
               className="text-white text-3xl focus:outline-none"
             >
-              {menuOpen ? <FaTimes /> : <CiMenuBurger />}
+              {!menuOpen ? <FaTimes /> : <CiMenuBurger />}
             </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
-        {menuOpen && (
-          <div className="md:hidden absolute top-6 ml-6 mr-6 flex mt-60 left-0 w-72 align-middle text-center bg-navBgC shadow-lg flex-col items-center z-50 ">
-          <div className="rounded-md bg-slate-900 mt-2">
-                <Link to="/about" className="text-black block">About</Link>
+        
+      </div>
+              
+    </nav>
+    {!menuOpen && (
+          <div className="md:hidden absolute top-6 w-full mt-60 left-0 align-middle text-center bg-navBgC shadow-lg flex-col items-center z-50 ">
+          <div className="rounded-md bg-slate-900 mt-2 ">
+                <Link to="/about" className="text-white block ">About</Link>
             </div>
-            <div className="rounded-md bg-slate-900 mt-2">
-                <Link to="/dashboard" className="text-black block">DashBoard</Link>
+            <div className="rounded-md bg-slate-900 mt-2 ">
+                <Link to="/dashboard" className="text-white  block">DashBoard</Link>
             </div>
-            <div className="rounded-md bg-slate-900 mt-2">
-                <Link to="/loginpage" className="text-black block">Login / SignUp</Link>
+            <div className="rounded-md bg-slate-900 mt-2 ">
+                <Link to="/loginpage" className="text-white  block">Login / SignUp</Link>
             </div>
           
           </div>
         )}
-      </div>
-    </nav>
+    </>
+   
   );
 }
 
