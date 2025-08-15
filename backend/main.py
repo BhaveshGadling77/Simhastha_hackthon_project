@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi import HTTPException
 from pydantic import BaseModel
 from passlib.hash import bcrypt
-from data_handler import*
+# from data_handler import*
 from geopy.distance import geodesic
 app = FastAPI()
 
