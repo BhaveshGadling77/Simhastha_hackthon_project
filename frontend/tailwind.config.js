@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'navBgC':'rgb(104, 133, 111)'
+        'navBgC':'rgb(28, 54, 35)'
       },
       screens: {
         'sm': '640px',

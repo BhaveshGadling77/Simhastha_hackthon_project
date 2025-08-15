@@ -49,7 +49,7 @@ function App() {
   return (
     <>
       <div className="min-h-screen flex flex-col">
-        <Navbar />
+        {/* <Navbar /> */}
         <Tagline />
         <div className="justify-center align-middle text-center">
           <Feature />
