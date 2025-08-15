@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
-// import { CiMenuFries } from "react-icons/ci";
-import { CiMenuBurger } from "react-icons/ci";
+import { CiMenuFries } from "react-icons/ci";
+// import { CiMenuBurger } from "react-icons/ci";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const style = {color:"#274020", size:"50px"}
   return (
-    <> <nav className="bg-navBgC w-screen z-50 backdrop-blur-sm fixed shadow-sm border-b-[1px] opacity-80">
+    <> <nav className="bg-navBgC w-screen z-50 backdrop-blur-sm fixed shadow-sm border-b-[1px] opacity-80 border-none">
       <div className="w-full lg:w-4/5 container px-6 py-2 md:py-4 mx-auto">
         <div className="flex flex-row justify-between items-center">
           {/* Logo and Name - always visible */}
@@ -47,32 +47,33 @@ function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="text-white text-3xl focus:outline-none"
+              className="text-white text-3xl focus:outline-none opacity-100"
             >
-              {!menuOpen ? <FaTimes /> : <CiMenuBurger />}
+              {menuOpen ? <FaTimes style={style}  /> : <CiMenuFries style={style} />}
             </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
-        
+            
       </div>
-              
+             
     </nav>
-    {!menuOpen && (
-          <div className="md:hidden absolute top-6 w-full mt-60 left-0 align-middle text-center bg-navBgC shadow-lg flex-col items-center z-50 ">
-          <div className="rounded-md bg-slate-900 mt-2 ">
-                <Link to="/about" className="text-white block ">About</Link>
+{menuOpen && (
+
+          <div className="md:hidden-[800px] p-12 opacity-95  top-6 w-full border-none rounded-lg mt-40 left-0 fixed align-middle text-center bg-navBgC shadow-lg block flex-col items-center z-50 ">
+          <div className="rounded-md bg-[#f4e4b3] mt-2">
+                <Link to="/about" className="text-[#284121] block ">About</Link>
             </div>
-            <div className="rounded-md bg-slate-900 mt-2 ">
-                <Link to="/dashboard" className="text-white  block">DashBoard</Link>
+            <div className="rounded-md bg-[#f4e4b3] mt-2 ">
+                <Link to="/dashboard" className="text-[#0e210e]  block">DashBoard</Link>
             </div>
-            <div className="rounded-md bg-slate-900 mt-2 ">
-                <Link to="/loginpage" className="text-white  block">Login / SignUp</Link>
+            <div className="rounded-md bg-[#f4e4b3] mt-2 ">
+                <Link to="/loginpage" className="text-[#284121] block">Login / SignUp</Link>
             </div>
           
           </div>
-        )}
+        )} 
     </>
    
   );
