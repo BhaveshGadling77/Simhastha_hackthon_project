@@ -5,7 +5,7 @@ import { CiMenuFries } from "react-icons/ci";
 // import { CiMenuBurger } from "react-icons/ci";
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
-    const style = { color: "#274020" };
+    const style = { color: "#f3e3b2"};
     return (
         <>
             {" "}
@@ -51,9 +51,9 @@ function Navbar() {
                                 className="text-white text-3xl focus:outline-none opacity-100"
                             >
                                 {menuOpen ? (
-                                    <FaTimes style={style} />
+                                    <FaTimes style={style} size={25} />
                                 ) : (
-                                    <CiMenuFries style={style} />
+                                    <CiMenuFries style={style} size={25}/>
                                 )}
                             </button>
                         </div>
