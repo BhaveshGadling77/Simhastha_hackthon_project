@@ -8,13 +8,6 @@ function Badge() {
   );
 }
 
-function Price({ amount }) {
-  return (
-    <div className="mt-9 text-5xl tracking-tighter leading-[58.08px]">
-      {amount}
-    </div>
-  );
-}
 
 function Description({ children }) {
   return (

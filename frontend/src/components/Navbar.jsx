@@ -5,7 +5,7 @@ import { CiMenuFries } from "react-icons/ci";
 // import { CiMenuBurger } from "react-icons/ci";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const style = {color:"#274020", size:"50px"}
+  const style = {color:"#274020"}
   return (
     <> <nav className="bg-navBgC w-screen z-50 backdrop-blur-sm fixed shadow-sm border-b-[1px] opacity-80 border-none">
       <div className="w-full lg:w-4/5 container px-6 py-2 md:py-4 mx-auto">
@@ -33,7 +33,7 @@ function Navbar() {
           {/* Desktop Links */}
           <div className="hidden md:flex font-bold gap-2 px-4 space-x-10 text-teal-50">
             <Link to="/dashboard" className="text-lg p-0">
-              Sponsors
+              DashBoard
             </Link>
             <Link to="/about" className="text-lg p-0">
               About
