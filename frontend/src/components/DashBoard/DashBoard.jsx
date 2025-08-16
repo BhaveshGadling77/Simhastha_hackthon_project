@@ -40,7 +40,7 @@ function DashBoard() {
                                     />
                                 </div>
                                 <div className="text-wrap text-green-900 font-bold text-center text-xl ">
-                                    WashRooms/RestRooms
+                                    WashRooms / RestRooms
                                 </div>
                                 <div className="mt-5">
                                     <button className="bg-[#5a4634]  w-58 rounded-lg mb-5 text-[#FDFDFD] p-2  cursor-pointer transition-colors duration-300 ease-in-out hover:bg-green-800 hover:text-[#f3e3b2]">
