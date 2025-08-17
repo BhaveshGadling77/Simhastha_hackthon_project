@@ -6,7 +6,7 @@ function LoginPage() {
     return (
         <div className="min-h-screen flex flex-col">
             <div className="align-middle text-center justify-center flex">
-                <div className="w-[430px] bg-white p-8 rounded-2xl shadow-lg mt-52 mb-40">
+                <div className="w-[430px] p-8 rounded-2xl shadow-lg mt-52 mb-40">
                     {/* Header Titles */}
                     <div className="flex justify-center mb-4">
                         <h2 className="text-3xl font-semibold text-center">
