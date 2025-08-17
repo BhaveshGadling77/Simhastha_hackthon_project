@@ -3,7 +3,7 @@ import { FaToilet } from "react-icons/fa";
 function DashBoard() {
     const styleForHospital = { color: "#274020" };
     return (
-        <div className="min-h-screen flex flex-col ">
+        <div className="min-h-screen flex flex-col">
             <div className="mt-[20vh] w-90">
                 <div className="text-center text-[#284121]">
                     <p className="text-4xl">Welcome [Username]</p>
