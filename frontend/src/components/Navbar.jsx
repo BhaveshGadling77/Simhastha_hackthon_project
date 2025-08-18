@@ -57,9 +57,9 @@ function Navbar() {
                                     Home
                                 </Link>
                                                                 <Link
-                                    to="/dashboard/"
+                                    to="/dashboard"
                                     className={`text-lg p-0 ${
-                                        location.pathname == "/signout"
+                                        location.pathname == "/dashboard"
                                             ? "text-[#ffd045]"
                                             : ""
                                     }`}
@@ -69,7 +69,7 @@ function Navbar() {
                                 <Link
                                     to="/dashboard/signout"
                                     className={`text-lg p-0 ${
-                                        location.pathname == "/signout"
+                                        location.pathname == "/dashboard/signout"
                                             ? "text-[#ffd045]"
                                             : ""
                                     }`}
@@ -79,7 +79,7 @@ function Navbar() {
                                 <Link
                                     to="dashboard/settings"
                                     className={`text-lg p-0 ${
-                                        location.pathname == "/settings"
+                                        location.pathname == "/dashboard/settings"
                                             ? "text-[#ffd045]"
                                             : ""
                                     }`}
