@@ -1,10 +1,14 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 import { CiMenuFries } from "react-icons/ci";
 // import { CiMenuBurger } from "react-icons/ci";
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
+    let location = useLocation();
+    useEffect(() => {
+        console.log(location)
+    }, [location])
     const style = { color: "#f3e3b2"};
     return (
         <>
@@ -14,7 +18,7 @@ function Navbar() {
                     <div className="flex flex-row justify-between items-center">
                         {/* Logo and Name - always visible */}
                         <div className="flex items-center">
-                            <Link to="/" className="px-0 mr-4 inline-block">
+                            <Link to="/" className="px-0 mr-4 inline-block active:text-red-700">
                                 <img
                                     src="/images/Saarthi-logo-transparent.png"
                                     alt="Saarthi Logo"
@@ -33,13 +37,16 @@ function Navbar() {
 
                         {/* Desktop Links */}
                         <div className="hidden md:flex font-bold gap-2 px-4 space-x-10 text-teal-50">
-                            <Link to="/dashboard" className="text-lg p-0">
+                            <Link to="/" className={`text-lg p-0 ${location.pathname == "/" ? "text-[#ffd045]":""}`}>
+                                Home
+                            </Link>
+                            <Link to="/dashboard" className={`text-lg p-0 ${location.pathname == "/dashboard" ? "text-[#ffd045]":""}`}>
                                 DashBoard
                             </Link>
-                            <Link to="/about" className="text-lg p-0">
+                            <Link to="/about" className={`text-lg p-0 ${location.pathname == "/about" ? "text-[#ffd045]":""}`}>
                                 About
                             </Link>
-                            <Link to="/loginpage" className="text-lg p-0">
+                            <Link to="/loginpage" className={`text-lg p-0 ${location.pathname == "/loginpage" ? "text-[#ffd045]":""}`}>
                                 Login / SignUp
                             </Link>
                         </div>
@@ -72,6 +79,11 @@ function Navbar() {
                     <div className="rounded-md bg-[#f4e4b3] mt-2 ">
                         <Link to="/dashboard" className="text-[#0e210e]  block">
                             DashBoard
+                        </Link>
+                    </div>
+                                        <div className="rounded-md bg-[#f4e4b3] mt-2 ">
+                        <Link to="/" className="text-[#0e210e]  block">
+                            Home
                         </Link>
                     </div>
                     <div className="rounded-md bg-[#f4e4b3] mt-2 ">
