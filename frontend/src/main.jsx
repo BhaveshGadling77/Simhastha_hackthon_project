@@ -9,7 +9,9 @@ import Layout from "./layout.jsx";
 import DashBoard from "./components/DashBoard/DashBoard.jsx";
 import NotFoundPage from "./components/NotFoundPage/NotFoundPage.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
-
+import Settings from "./components/DashBoard/Settings/settings.jsx";
+import SignOut from "./components/DashBoard/SignOut/signout.jsx";
+import DashBoardLayout from "./dashBoardLayout.jsx";
 const Router = createBrowserRouter([
     {
         path: "/",
@@ -25,7 +27,21 @@ const Router = createBrowserRouter([
             },
             {
                 path: "dashboard",
-                element: <DashBoard />,
+                element: <DashBoardLayout />,
+                children:[
+                    {
+                        path:"",
+                        element:<DashBoard/>
+                    },
+                    {
+                        path:"settings",
+                        element:<Settings />
+                    },
+                    {
+                        path:"signout",
+                        element:<SignOut />
+                    }
+                ]
             },
             {
                 path: "loginpage",

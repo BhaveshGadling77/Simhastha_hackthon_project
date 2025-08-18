@@ -8,7 +8,7 @@ function Navbar() {
     let location = useLocation();
     const [onDashBoard, setOnDashBoard] = useState(false);
     useEffect(() => {
-        if (location.pathname == "/dashboard") {
+        if (location.pathname.includes('/dashboard')) {
             setOnDashBoard(true);
         } else{
             setOnDashBoard(false)
@@ -56,10 +56,20 @@ function Navbar() {
                                 >
                                     Home
                                 </Link>
-                                <Link
-                                    to="/"
+                                                                <Link
+                                    to="/dashboard/"
                                     className={`text-lg p-0 ${
-                                        location.pathname == "/about"
+                                        location.pathname == "/signout"
+                                            ? "text-[#ffd045]"
+                                            : ""
+                                    }`}
+                                >
+                                    DashBoard
+                                </Link>
+                                <Link
+                                    to="/dashboard/signout"
+                                    className={`text-lg p-0 ${
+                                        location.pathname == "/signout"
                                             ? "text-[#ffd045]"
                                             : ""
                                     }`}
@@ -67,9 +77,9 @@ function Navbar() {
                                     SignOut
                                 </Link>
                                 <Link
-                                    to="/"
+                                    to="dashboard/settings"
                                     className={`text-lg p-0 ${
-                                        location.pathname == "/dashboard"
+                                        location.pathname == "/settings"
                                             ? "text-[#ffd045]"
                                             : ""
                                     }`}
