@@ -54,7 +54,7 @@ function About() {
                 <p className="text-wrap text-2xl">Meet The Team</p>
             </div>
             {/* this will be the */}
-            <div className=" justify-center align-middle text-center flex">
+            <div className=" justify-center align-middle text-center flex mb-6">
                 <div className="flex flex-3 w-[650px] space-x-2">
                 {data.map(data => <Section key={data.id} data={data}/>)}
                 {/* <Section props={data}/> */}

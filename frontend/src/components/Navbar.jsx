@@ -6,8 +6,12 @@ import { CiMenuFries } from "react-icons/ci";
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     let location = useLocation();
+    const [signOut, setSignOut] = useState(false);
     useEffect(() => {
-        console.log(location)
+
+        if (location.pathname == "/dashboard") {
+            setSignOut(true);
+        }
     }, [location])
     const style = { color: "#f3e3b2"};
     return (
