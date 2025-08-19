@@ -13,7 +13,7 @@ function DashBoard() {
                 <div className="flex flex-2 align-middle justify-center mt-20 flex-wrap">
                     <div className=" bg-[#f3e3b2] inline-block align-middle w-56 justify-center rounded-xl mt-6 mr-5 p-6">
                         <div className="align-middle justify-center text-center flex-1">
-                            <div>
+                            
                                 <div className="align-middle justify-center text-center flex mt-3">
                                     <CiHospital1
                                         size={100}
@@ -29,7 +29,7 @@ function DashBoard() {
                                         <Link to="/dashboard/healthcenters">Find HealthCenters</Link>
                                     </button>
                                 </div>
-                            </div>
+                            
                         </div>
                     </div>
                     <div className=" bg-[#f3e3b2] inline-block align-middle w-56 justify-center rounded-xl mt-6 mr-5 p-6">
@@ -45,9 +45,12 @@ function DashBoard() {
                                     WashRooms / RestRooms
                                 </div>
                                 <div className="mt-5">
-                                    <button className="bg-[#5a4634]  w-58 rounded-lg mb-5 text-[#FDFDFD] p-2  cursor-pointer transition-colors duration-300 ease-in-out hover:bg-green-800 hover:text-[#f3e3b2]">
-                                        <Link to="/dashboard/restrooms">Find Restrooms</Link>
-                                    </button>
+                                    <Link to="/dashboard/restrooms">
+                                        <button className="bg-[#5a4634]  w-58 rounded-lg mb-5 text-[#FDFDFD] p-2  cursor-pointer transition-colors duration-300 ease-in-out hover:bg-green-800 hover:text-[#f3e3b2]">
+                                            Find Restrooms
+                                        </button>
+                                    </Link>
+                                    
                                 </div>
                             </div>
                         </div>
