@@ -1,5 +1,7 @@
 import { CiHospital1 } from "react-icons/ci";
 import { FaToilet } from "react-icons/fa";
+import { Link } from "react-router";
+
 function DashBoard() {
     const styleForHospital = { color: "#274020" };
     return (
@@ -24,7 +26,7 @@ function DashBoard() {
                                 </div>
                                 <div className="mt-5">
                                     <button className="bg-[#5a4634] w-58 rounded-lg mb-5 text-[#FDFDFD] p-2 cursor-pointer transition-colors duration-300 ease-in-out hover:bg-green-800 hover:text-[#f3e3b2]">
-                                        Find Health Centers
+                                        <Link to="/dashboard/healthcenters">Find HealthCenters</Link>
                                     </button>
                                 </div>
                             </div>
@@ -44,7 +46,7 @@ function DashBoard() {
                                 </div>
                                 <div className="mt-5">
                                     <button className="bg-[#5a4634]  w-58 rounded-lg mb-5 text-[#FDFDFD] p-2  cursor-pointer transition-colors duration-300 ease-in-out hover:bg-green-800 hover:text-[#f3e3b2]">
-                                        Find Restrooms
+                                        <Link to="/dashboard/restrooms">Find Restrooms</Link>
                                     </button>
                                 </div>
                             </div>

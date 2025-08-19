@@ -77,6 +77,16 @@ function Navbar() {
                                     SignOut
                                 </Link>
                                 <Link
+                                    to="/about"
+                                    className={`text-lg p-0 ${
+                                        location.pathname == "/about"
+                                            ? "text-[#ffd045]"
+                                            : ""
+                                    }`}
+                                >
+                                    About
+                                </Link>
+                                <Link
                                     to="dashboard/settings"
                                     className={`text-lg p-0 ${
                                         location.pathname == "/dashboard/settings"
@@ -86,6 +96,7 @@ function Navbar() {
                                 >
                                     Settings
                                 </Link>
+                                                                
                                 </div>
                         ):(<div className="hidden md:flex font-bold gap-2 px-4 space-x-10 text-teal-50">
                                 <Link

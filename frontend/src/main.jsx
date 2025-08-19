@@ -12,6 +12,8 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Settings from "./components/DashBoard/Settings/settings.jsx";
 import SignOut from "./components/DashBoard/SignOut/signout.jsx";
 import DashBoardLayout from "./dashBoardLayout.jsx";
+import HealthCenters from "./components/DashBoard/HealthCenters.jsx";
+import RestRooms from "./components/DashBoard/RestRooms.jsx";
 const Router = createBrowserRouter([
     {
         path: "/",
@@ -40,6 +42,14 @@ const Router = createBrowserRouter([
                     {
                         path:"signout",
                         element:<SignOut />
+                    },
+                    {
+                        path:"healthcenters",
+                        element:<HealthCenters/>
+                    },
+                    {
+                        path:"restrooms",
+                        element:<RestRooms/>
                     }
                 ]
             },
