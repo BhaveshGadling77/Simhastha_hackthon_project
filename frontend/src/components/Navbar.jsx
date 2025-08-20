@@ -18,8 +18,8 @@ function Navbar() {
     return (
         <>
             {" "}
-            <nav className="bg-navBgC w-screen z-50 backdrop-blur-sm fixed shadow-sm border-b-[1px] opacity-80 border-none">
-                <div className="w-full lg:w-4/5 container px-6 py-2 md:py-4 mx-auto">
+            <nav className="bg-navBgC w-screen z-50 shadow-sm fixed  border-b-[1px] opacity-80 border-none backdrop-blur-2xl">
+                <div className="w-full lg:w-4/5 container px-6 py-2 md:py-4 mx-auto ">
                     <div className="flex flex-row justify-between items-center">
                         {/* Logo and Name - always visible */}
                         <div className="flex items-center">

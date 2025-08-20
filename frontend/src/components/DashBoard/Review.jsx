@@ -24,14 +24,12 @@ function Review({ data }) {
                     <p className="inline-block ml-5 font-semibold text-3xl" >
                         {data.username}
                     </p>
-                    <div className="ml-6 flex items-center gap-2 mb-3 text-wrap">
+                    <div className="ml-6 flex items-center gap-2 text-wrap">
                         <Rating 
                                 defaultValue={data.star} 
-                                precision={0.5} 
-                                // sx={{ fontSize: "2rem" }}
-                                icon={<span className="text-yellow-500" style={{ fontSize: "40px" }}>★</span>}
-                                emptyIcon={<span className="text-gray-300" style={{ fontSize: "40px" }}>★</span>}
-
+                                precision={0.5}
+                                icon={<span className="text-yellow-500" style={{ fontSize: "30px" }}>★</span>}
+                                emptyIcon={<span className="text-gray-300" style={{ fontSize: "30px" }}>★</span>}
                                 />
                         <span className="inline-block text-[13px] text-gray-500">{data.month} months ago</span>
                     </div>
