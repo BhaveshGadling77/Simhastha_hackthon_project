@@ -2,7 +2,7 @@
     "Review": [
         {
             "id": 1,
-            "feedback": "Flipkart generally receives mixed reviews. Many users praise its wide product selection and competitive prices, especially for electronics and gaming. However, a significant number of customers express dissatisfaction with aspects like delivery delays, product quality issues, and unhelpful customer service. Some reviewers also allege that Flipkart manipulates reviews to favor positive ones",
+            "feedback": "Flipkart generally receives mixed reviews. Many users praise its wide product selection and competitive prices, especially for electronics and gaming. However, a significant number of customers express dissatisfaction with aspects like delivery delays, product quality issues, and unhelpful customer service. Some reviewers also allege that Flipkart manipulates reviews to favor positive ones.",
             "star": 5,
             "month":2,
             "username": "Bhavesh Gadling",
@@ -10,7 +10,7 @@
         },
         {
             "id": 2,
-            "feedback": "Do next thing",
+            "feedback": "Do next thing.",
             "star": 4.5,
             "month":2,
             "username": "Aditi Bhise",
@@ -19,7 +19,7 @@
         },
         {
             "id": 3,
-            "feedback": "Do nothing",
+            "feedback": "Do nothing.",
             "star": 2,
             "month":2,
             "username": "Sangram Lohkare",
@@ -27,7 +27,7 @@
         },
         {
             "id": 4,
-            "feedback": "Do nothing",
+            "feedback": "Do nothing.",
             "star": 2,
             "month":2,
             "username": "Sangram Lohkare",
@@ -35,7 +35,7 @@
         },
         {
             "id": 5,
-            "feedback": "Flipkart generally receives mixed reviews. Many users praise its wide product selection and competitive prices, especially for electronics and gaming. However, a significant number of customers express dissatisfaction with aspects like delivery delays, product quality issues, and unhelpful customer service. Some reviewers also allege that Flipkart manipulates reviews to favor positive ones",
+            "feedback": "Flipkart generally receives mixed reviews. Many users praise its wide product selection and competitive prices, especially for electronics and gaming. However, a significant number of customers express dissatisfaction with aspects like delivery delays, product quality issues, and unhelpful customer service. Some reviewers also allege that Flipkart manipulates reviews to favor positive ones.",
             "star": 5,
             "month":2,
             "username": "Bhavesh Gadling",

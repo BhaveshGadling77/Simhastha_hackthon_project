@@ -4,18 +4,7 @@ import Review from "./Review";
 import useFetch from "../UseFetch";
 import axios from "axios";
 function RestRooms() {
-    // const [Review, setReview] = useState([])
-    // console.log(data)
-    // const [data, setData] = useState([])
-    // useEffect(() => {
-    //     fetch('http://localhost:3000/Review')
-    //     .then((res) => {
-    //         return res.json()
-    //     })
-    //     .then((data)=> {
-    //         setData(data)
-    //     })
-    // }, [])
+    //fetching data from the useFetch Hook.
     const { data, isPending, Error } = useFetch('http://localhost:3000/Review')
     console.log(Error)
     return (
