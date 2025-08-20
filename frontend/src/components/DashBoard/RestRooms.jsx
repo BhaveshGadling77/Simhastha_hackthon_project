@@ -19,12 +19,9 @@ function RestRooms() {
     return (
         <div className="mt-28">
             <p>This is should be the restroom component.</p>
-            {data.map((post) => <div key={post.id}>
-                {/* <p>Name :- {post.username}</p>
-                <p>Rating :- {post.star}</p>
-                <p>Feedback :- {post.feedback}</p> */}
+            {data.map((post) => 
                 <Review key={post.id} data={post}/>
-            </div>)}
+        )}
         </div>
     )
 }
