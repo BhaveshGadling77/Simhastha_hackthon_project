@@ -4,20 +4,27 @@ import Review from "./Review";
 import useFetch from "../UseFetch";
 import axios from "axios";
 function RestRooms() {
-    const [Review, setReview] = useState(null)
+    // const [Review, setReview] = useState([])
     // console.log(data)
+    const [data, setData] = useState([])
     useEffect(() => {
-        axios.get("http://localhost:3000/Review")
-        .then((res)=> {
-            res = res.json()
-            console.log(res.data)
-            return res
+        fetch('http://localhost:3000/Review')
+        .then((res) => {
+            return res.json()
         })
-    }, [onload])
+        .then((data)=> {
+            setData(data)
+        })
+    }, [])
     return (
         <div className="mt-28">
             <p>This is should be the restroom component.</p>
-        
+            {data.map((post) => <div key={post.id}>
+                {/* <p>Name :- {post.username}</p>
+                <p>Rating :- {post.star}</p>
+                <p>Feedback :- {post.feedback}</p> */}
+                <Review key={post.id} data={post}/>
+            </div>)}
         </div>
     )
 }

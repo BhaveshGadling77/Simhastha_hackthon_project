@@ -2,21 +2,25 @@
     "Review": [
         {
             "id": 1,
-            "feedback": "Done something my brother",
+            "feedback": "Done something great",
             "star": 5,
-            "username": "Bhavesh Gadling"
+            "username": "Bhavesh Gadling",
+            "avatar":"   https://cdn-icons-png.flaticon.com/512/552/552721.png "
         },
         {
             "id": 2,
             "feedback": "Do next thing",
             "star": 4.5,
-            "username": "Aditi Bhise"
+            "username": "Aditi Bhise",
+            "avatar":"   https://cdn-icons-png.flaticon.com/512/552/552721.png "
+
         },
         {
             "id": 3,
             "feedback": "Do nothing",
-            "star": 2.5,
-            "username": "Sangram Lohkare"
+            "star": 2,
+            "username": "Sangram Lohkare",
+            "avatar":"   https://cdn-icons-png.flaticon.com/512/552/552721.png "
         }
     ]
 }
