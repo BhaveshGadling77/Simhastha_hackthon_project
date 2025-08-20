@@ -9,9 +9,9 @@ function Review({ data }) {
     // console.log(useFetch(url))
     console.log(Error);
     return (
-        <div className="w-96 flex-1 mt-4">
-            <div className="flex w-96">
-                <div className="flex justify-center align-middle">
+        <div className="min-w-[300px] w-fit mt-4 bg-slate-50 pt-3 rounded-md shadow-lg">
+            <div className="flex w-[600px]">
+                <div className="flex justify-center align-middle pl-2">
                     <div className="align-middle justify-center flex">
                         <img
                             src={data.avatar}
@@ -21,22 +21,17 @@ function Review({ data }) {
                     </div>
                 </div>
                 <div className="inline-block">
-                    <p className="inline-block ml-5 font-bold text-xl">
+                    <p className="inline-block ml-5 font-bold text-3xl" >
                         {data.username}
                     </p>
-                    <div className="ml-6">
-                        <Rating
-                            name="half-rating-read"
-                            className="inline-block"
-                            defaultValue={data.star}
-                            precision={0.5}
-                            readOnly
-                        />
+                    <div className="ml-6 flex items-center gap-2 mb-3 text-wrap">
+                        <Rating name="size-large" defaultValue={data.star} size="large" precision={0.5} />
+                        <span className="inline-block text-[13px] text-gray-500">{data.month} months ago</span>
                     </div>
                 </div>
             </div>
-            <div className="flex">
-                {data.feedback}
+            <div className="flex ml-9 w-[550px] pb-3">
+                <p className="ml-14">{data.feedback}</p>
             </div>
         </div>
     );

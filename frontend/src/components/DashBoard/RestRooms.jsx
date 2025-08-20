@@ -18,9 +18,10 @@ function RestRooms() {
     }, [])
     return (
         <div className="mt-28">
-            <p>This is should be the restroom component.</p>
-            {data.map((post) => 
+            
+            {data.map((post) => <div className="inline-block mr-3">
                 <Review key={post.id} data={post}/>
+            </div>
         )}
         </div>
     )
