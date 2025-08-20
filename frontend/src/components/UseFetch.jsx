@@ -9,7 +9,6 @@ function useFetch(url) {
     //if you want to at certain elements when they render then on then some states should change.
 
     //fetching the data
-    setInterval(() => {
       fetch(url)
         .then((response) => {
           console.log(response);
@@ -29,7 +28,6 @@ function useFetch(url) {
           setIsPending(false);
           setError(e);
         });
-    }, 10000);
   }, []);
   return { data, isPending, Error };
 }

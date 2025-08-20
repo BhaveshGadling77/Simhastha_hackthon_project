@@ -25,7 +25,7 @@ function Review({ data }) {
                         {data.username}
                     </p>
                     <div className="ml-6 flex items-center gap-2 mb-3 text-wrap">
-                        <Rating name="size-large" defaultValue={data.star} size="large" precision={0.5} />
+                        <Rating name="size-large" defaultValue={data.star} size="large" precision={0.5} readOnly/>
                         <span className="inline-block text-[13px] text-gray-500">{data.month} months ago</span>
                     </div>
                 </div>
