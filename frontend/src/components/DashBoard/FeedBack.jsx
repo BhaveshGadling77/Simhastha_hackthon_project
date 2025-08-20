@@ -12,12 +12,16 @@ function FeedBack() {
                             <Rating 
                              
                                 precision={0.5}
-                                icon={<span className="text-yellow-500" style={{ fontSize: "70px" }}>★</span>}
+                                icon={<span className="text-green-900" style={{ fontSize: "70px" }}>★</span>}
                                 emptyIcon={<span className="text-gray-300" style={{ fontSize: "70px" }}>★</span>}
                                 />
             </div>
              <div className="flex align-middle justify-center">
-                   <textarea type="text" className="w-60 block " placeholder="give some feedback..." ></textarea>
+                   <textarea type="text" className="w-60 block rounded-md border border-black" placeholder="give some feedback..." ></textarea>
+                    
+                </div>
+                <div className="flex align-middle justify-center mt-5">
+                    <button type="submit" className="bg-green-950 text-white rounded-md px-6 py-3 ">Submit</button>
                 </div>
         </div>
     );
