@@ -21,11 +21,18 @@ function Review({ data }) {
                     </div>
                 </div>
                 <div className="inline-block">
-                    <p className="inline-block ml-5 font-bold text-3xl" >
+                    <p className="inline-block ml-5 font-semibold text-3xl" >
                         {data.username}
                     </p>
                     <div className="ml-6 flex items-center gap-2 mb-3 text-wrap">
-                        <Rating name="size-large" defaultValue={data.star} size="large" precision={0.5} readOnly/>
+                        <Rating 
+                                defaultValue={data.star} 
+                                precision={0.5} 
+                                // sx={{ fontSize: "2rem" }}
+                                icon={<span className="text-yellow-500" style={{ fontSize: "40px" }}>★</span>}
+                                emptyIcon={<span className="text-gray-300" style={{ fontSize: "40px" }}>★</span>}
+
+                                />
                         <span className="inline-block text-[13px] text-gray-500">{data.month} months ago</span>
                     </div>
                 </div>
