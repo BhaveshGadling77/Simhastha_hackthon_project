@@ -4,7 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaMicrosoft } from "react-icons/fa6";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { FaApple } from "react-icons/fa6";
-import { auth, Facebookprovider, Googleprovider } from "../../config/firebase";
+import { auth, Googleprovider } from "../../config/firebase";
 import {
     createUserWithEmailAndPassword,
     signInWithPopup,
@@ -29,6 +29,7 @@ function LoginPage() {
         alert(
             `Thank You for Logging in this website ${auth?.currentUser?.displayName}`
         );
+        window.location.href = '/dashboard'
     }
     async function logOut() {
         try {
@@ -165,16 +166,6 @@ function LoginPage() {
                         <div className="bg-white rounded-lg">
                             <button className="p-2">
                                 <FaMicrosoft size={"50px"} />
-                            </button>
-                        </div>
-                        <div className="bg-white rounded-lg">
-                            <button className="p-2">
-                                <FaSquareFacebook size={"50px"} style={style} />
-                            </button>
-                        </div>
-                        <div className="bg-white rounded-lg">
-                            <button className="p-2">
-                                <FaApple size={"50px"} />
                             </button>
                         </div>
                     </div>
