@@ -1,8 +1,49 @@
 import React from "react";
 import { useState } from "react";
+import { FcGoogle } from "react-icons/fc";
+import { FaMicrosoft } from "react-icons/fa6";
+import { FaSquareFacebook } from "react-icons/fa6";
+import { FaApple } from "react-icons/fa6";
+import { auth, Facebookprovider, Googleprovider } from "../../config/firebase";
+import {
+    createUserWithEmailAndPassword,
+    signInWithPopup,
+    signOut,
+} from "firebase/auth";
+
+// import {logOut, signInWithGoogle, SignIn} from './handleSignUp'
 function LoginPage() {
     const [isLoginMode, setIsLoginMode] = useState(true);
+    const style = {
+        color: "#0060ff",
+    };
+    const [Email, setEmail] = useState("");
+    const [Password, setPassword] = useState("");
 
+    async function signInWithGoogle() {
+        try {
+            await signInWithPopup(auth, Googleprovider);
+        } catch (e) {
+            console.error(e);
+        }
+        alert(
+            `Thank You for Logging in this website ${auth?.currentUser?.displayName}`
+        );
+    }
+    async function logOut() {
+        try {
+            await signOut(auth);
+        } catch (e) {
+            console.error(e);
+        }
+    }
+    async function SignIn() {
+        try {
+            await createUserWithEmailAndPassword(auth, Email, Password);
+        } catch (e) {
+            console.error(e);
+        }
+    }
     return (
         <div className="min-h-screen flex flex-col">
             <div className="align-middle text-center justify-center flex">
@@ -47,6 +88,7 @@ function LoginPage() {
                                 type="text"
                                 placeholder="Name"
                                 required
+                                // onChange={(e) => setEmail(e.target.value)}
                                 className="w-full p-3 border-b-2 border-gray-300 outline-none focus:border-cyan-500 placeholder-gray-400"
                             />
                         )}
@@ -56,6 +98,7 @@ function LoginPage() {
                             type="email"
                             placeholder="Email Address"
                             required
+                            onChange={(e) => setEmail(e.target.value)}
                             className="w-full p-3 border-b-2 border-gray-300 outline-none focus:border-cyan-500 placeholder-gray-400"
                         />
                         <input
@@ -96,7 +139,8 @@ function LoginPage() {
                         <p className="text-center text-gray-600">
                             {isLoginMode
                                 ? "Don't have an account?"
-                                : "Already have an account?"}{" "}
+                                : "Already have an account?"}
+
                             <a
                                 href="#"
                                 onClick={(e) => {
@@ -108,7 +152,30 @@ function LoginPage() {
                                 {isLoginMode ? "Signup now" : "Login"}
                             </a>
                         </p>
+                        <p className="text-gray-600">{"or Sign In with"}</p>
                     </form>
+                    <div className="flex mt-5 space-x-2 align-middle justify-center">
+                        <div className="bg-white rounded-lg">
+                            <button className="p-2">
+                                <FcGoogle size={"50px"} />
+                            </button>
+                        </div>
+                        <div className="bg-white rounded-lg">
+                            <button className="p-2">
+                                <FaMicrosoft size={"50px"} />
+                            </button>
+                        </div>
+                        <div className="bg-white rounded-lg">
+                            <button className="p-2">
+                                <FaSquareFacebook size={"50px"} style={style} />
+                            </button>
+                        </div>
+                        <div className="bg-white rounded-lg">
+                            <button className="p-2">
+                                <FaApple size={"50px"} />
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
