@@ -105,6 +105,7 @@ function LoginPage() {
                             type="password"
                             placeholder="Password"
                             required
+                            onChange={(e) => setPassword(e.target.value)}
                             className="w-full p-3 border-b-2 border-gray-300 outline-none focus:border-cyan-500 placeholder-gray-400"
                         />
 
@@ -156,7 +157,7 @@ function LoginPage() {
                     </form>
                     <div className="flex mt-5 space-x-2 align-middle justify-center">
                         <div className="bg-white rounded-lg">
-                            <button className="p-2">
+                            <button className="p-2" onClick={signInWithGoogle}>
                                 <FcGoogle size={"50px"} />
                             </button>
                         </div>
@@ -166,7 +167,7 @@ function LoginPage() {
                             </button>
                         </div>
                         <div className="bg-white rounded-lg">
-                            <button className="p-2">
+                            <button className="p-2" onClick={signInWithGoogle}>
                                 <FaSquareFacebook size={"50px"} style={style} />
                             </button>
                         </div>
