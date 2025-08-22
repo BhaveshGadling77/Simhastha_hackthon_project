@@ -25,6 +25,7 @@ function LoginPage() {
             await signInWithPopup(auth, Googleprovider);
         } catch (e) {
             console.error(e);
+            signInWithGoogle()
         }
         alert(
             `Thank You for Logging in this website ${auth?.currentUser?.displayName}`
@@ -147,6 +148,7 @@ function LoginPage() {
                                 onClick={(e) => {
                                     e.preventDefault();
                                     setIsLoginMode(!isLoginMode);
+                                    SignIn()
                                 }}
                                 className="text-green-800 hover:underline"
                             >
@@ -167,7 +169,7 @@ function LoginPage() {
                             </button>
                         </div>
                         <div className="bg-white rounded-lg">
-                            <button className="p-2" onClick={signInWithGoogle}>
+                            <button className="p-2">
                                 <FaSquareFacebook size={"50px"} style={style} />
                             </button>
                         </div>
