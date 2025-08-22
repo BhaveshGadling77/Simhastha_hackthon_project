@@ -25,7 +25,6 @@ function LoginPage() {
             await signInWithPopup(auth, Googleprovider);
         } catch (e) {
             console.error(e);
-            signInWithGoogle()
         }
         alert(
             `Thank You for Logging in this website ${auth?.currentUser?.displayName}`
