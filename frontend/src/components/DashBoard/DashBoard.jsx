@@ -1,14 +1,14 @@
 import { CiHospital1 } from "react-icons/ci";
 import { FaToilet } from "react-icons/fa";
 import { Link } from "react-router";
-
+import {username} from '../LoginPage/LoginPage'
 function DashBoard() {
     const styleForHospital = { color: "#274020" };
     return (
         <div className="min-h-screen flex flex-col">
             <div className="mt-[20vh] w-90">
                 <div className="text-center text-[#284121]">
-                    <p className="text-4xl">Welcome [Username]</p>
+                    <p className="text-4xl">Welcome {username}</p>
                 </div>
                 <div className="flex flex-2 align-middle justify-center mt-20 flex-wrap">
                     <div className=" bg-[#f3e3b2] inline-block align-middle w-56 justify-center rounded-xl mt-6 mr-5 p-6">
@@ -55,6 +55,7 @@ function DashBoard() {
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>

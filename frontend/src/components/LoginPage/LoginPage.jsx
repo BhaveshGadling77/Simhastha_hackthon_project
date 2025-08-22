@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaMicrosoft } from "react-icons/fa6";
@@ -12,11 +13,13 @@ import {
 } from "firebase/auth";
 
 // import {logOut, signInWithGoogle, SignIn} from './handleSignUp'
+
 function LoginPage() {
     const [isLoginMode, setIsLoginMode] = useState(true);
     const style = {
         color: "#0060ff",
     };
+    const navigate = useNavigate()
     const [Email, setEmail] = useState("");
     const [Password, setPassword] = useState("");
 
@@ -29,7 +32,8 @@ function LoginPage() {
         alert(
             `Thank You for Logging in this website ${auth?.currentUser?.displayName}`
         );
-        window.location.href = '/dashboard'
+        
+        navigate('/dashboard');        
     }
     async function logOut() {
         try {
@@ -174,5 +178,5 @@ function LoginPage() {
         </div>
     );
 }
-
+export const username = auth?.currentUser?.displayName;
 export default LoginPage;
