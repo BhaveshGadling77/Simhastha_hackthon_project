@@ -30,6 +30,7 @@ function Review({ data }) {
                                 precision={0.5}
                                 icon={<span className="text-yellow-500" style={{ fontSize: "30px" }}>★</span>}
                                 emptyIcon={<span className="text-gray-300" style={{ fontSize: "30px" }}>★</span>}
+                                readOnly
                                 />
                         <span className="inline-block text-[13px] text-gray-500">{data.month} months ago</span>
                     </div>

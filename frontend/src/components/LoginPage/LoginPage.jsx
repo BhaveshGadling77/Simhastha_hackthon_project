@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createContext, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
@@ -11,7 +11,7 @@ import {
     signInWithPopup,
     signOut,
 } from "firebase/auth";
-
+const usernameContext = createContext();
 // import {logOut, signInWithGoogle, SignIn} from './handleSignUp'
 
 function LoginPage() {
@@ -33,7 +33,8 @@ function LoginPage() {
             `Thank You for Logging in this website ${auth?.currentUser?.displayName}`
         );
         
-        navigate('/dashboard');        
+        navigate('/dashboard');      
+          
     }
     async function logOut() {
         try {

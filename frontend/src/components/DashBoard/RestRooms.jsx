@@ -10,16 +10,17 @@ function RestRooms() {
     console.log(Error)
     return (
         <div className="mt-28">
+            <div className="flex flex-1 justify-center mt-3 mb-4">
+                    <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1J6tAKws46-gpxm4B-QeDjs7fziGc-7A&ehbc=2E312F&noprof=1" width="600" height="480"></iframe>
+
+                    </div>
             <FeedBack/>
             {isPending && (
                 <>
                 Loading....     
                 </>
             )}
-                <div className="flex flex-1 justify-center mt-3 mb-4">
-                    <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1J6tAKws46-gpxm4B-QeDjs7fziGc-7A&ehbc=2E312F&noprof=1" width="600" height="480"></iframe>
-
-                    </div>
+                
             {Error && <>
                 Failed to Fetch the Data. 
                 </>}
