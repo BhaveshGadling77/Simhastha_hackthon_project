@@ -7,7 +7,7 @@ router = APIRouter()
 
 #storing signup details
 @router.post("/sign-up")
-def sign_up(details: Signup):
+async def sign_up(details: Signup):
     if find_user(details.username, "u") is not None: #find_user returns None if username not found
         raise HTTPException(status_code=400, detail="Username already exists.")
     if find_user(details.email, "e") is not None: #find_user returns None if email not found
