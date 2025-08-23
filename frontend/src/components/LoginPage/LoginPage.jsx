@@ -13,8 +13,10 @@ import {
 
     signOut,
 } from "firebase/auth";
-const usernameContext = createContext();
+import { useData } from "../../context/data";
+
 // import {logOut, signInWithGoogle, SignIn} from './handleSignUp'
+const {data} = useData()
 
 function LoginPage() {
     const [isLoginMode, setIsLoginMode] = useState(true);
@@ -36,7 +38,8 @@ function LoginPage() {
         alert(
             `Thank You for Logging in this website ${auth?.currentUser?.displayName}`
         );
-        
+        data = {name:auth.currentUser.displayName}
+        console.log(data)
         navigate('/dashboard');      
           
     }
@@ -57,6 +60,7 @@ function LoginPage() {
             setMsg("SuccessFully the user is created.")
             const docref = doc(db, "users", user.uid)
             setDoc(docref, userData)
+
             navigate('/dashboard'); 
         } catch (e) {
             console.error(e);

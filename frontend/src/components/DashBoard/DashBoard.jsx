@@ -1,7 +1,7 @@
 import { CiHospital1 } from "react-icons/ci";
 import { FaToilet } from "react-icons/fa";
 import { Link } from "react-router";
-import {username} from '../LoginPage/LoginPage'
+import username from '../LoginPage/LoginPage'
 function DashBoard() {
     const styleForHospital = { color: "#274020" };
     return (
