@@ -6,9 +6,11 @@ import { FaMicrosoft } from "react-icons/fa6";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { FaApple } from "react-icons/fa6";
 import { auth, Googleprovider } from "../../config/firebase";
+import {   getFirestore, setDoc, doc, Firestore} from 'firebase/firestore'
 import {
     createUserWithEmailAndPassword,
     signInWithPopup,
+
     signOut,
 } from "firebase/auth";
 const usernameContext = createContext();
@@ -19,10 +21,12 @@ function LoginPage() {
     const style = {
         color: "#0060ff",
     };
+    const db = getFirestore()
     const navigate = useNavigate()
     const [Email, setEmail] = useState("");
     const [Password, setPassword] = useState("");
-
+    const [username, setUsername] = useState("")
+    const [msg, setMsg] = useState('')
     async function signInWithGoogle() {
         try {
             await signInWithPopup(auth, Googleprovider);
@@ -45,9 +49,20 @@ function LoginPage() {
     }
     async function SignIn() {
         try {
-            await createUserWithEmailAndPassword(auth, Email, Password);
+            const user= await createUserWithEmailAndPassword(auth, Email, Password);
+            const userData = {
+                email: Email,
+                username: username
+            }
+            setMsg("SuccessFully the user is created.")
+            const docref = doc(db, "users", user.uid)
+            setDoc(docref, userData)
+            navigate('/dashboard'); 
         } catch (e) {
             console.error(e);
+            if (e == 'auth/email-already-in-use') {
+                setMsg('Email is already in user.')
+            }
         }
     }
     return (
@@ -94,7 +109,7 @@ function LoginPage() {
                                 type="text"
                                 placeholder="Name"
                                 required
-                                // onChange={(e) => setEmail(e.target.value)}
+                                onChange={(e) => setUsername(e.target.value)}
                                 className="w-full p-3 border-b-2 border-gray-300 outline-none focus:border-cyan-500 placeholder-gray-400"
                             />
                         )}
@@ -174,6 +189,9 @@ function LoginPage() {
                             </button>
                         </div>
                     </div>
+                </div>
+                <div>
+                    {msg}
                 </div>
             </div>
         </div>
