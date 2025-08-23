@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-
 from routers import auth, washrooms, health_centers, feedback
 app = FastAPI()
 

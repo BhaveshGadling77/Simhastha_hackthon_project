@@ -2,7 +2,7 @@ from fastapi import APIRouter
 from models import Login, Signup
 from fastapi import HTTPException
 from passlib.hash import bcrypt
-from data_handler import*
+from data_handler import *
 router = APIRouter()
 
 #storing signup details
