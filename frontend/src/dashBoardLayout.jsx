@@ -6,7 +6,6 @@ function DashBoardLayout() {
         <div className="min-h-screen flex flex-col">
             <Outlet/>    
         </div>
-        
     )
 }
 export default DashBoardLayout;

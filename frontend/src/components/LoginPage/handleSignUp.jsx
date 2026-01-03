@@ -10,7 +10,7 @@ import {
     signOut,
 } from "firebase/auth";
 
-import useData from "../../context/data";
+import { useData } from "../../context/data";
 const [Email, setEmail] = useState("");
 const [Password, setPassword] = useState("");
 

@@ -4,21 +4,21 @@ import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaMicrosoft } from "react-icons/fa6";
 import { FaSquareFacebook } from "react-icons/fa6";
+// import { useData } from "../../context/data";
 import { FaApple } from "react-icons/fa6";
 import { auth, Googleprovider } from "../../config/firebase";
+// import {logOut, signInWithGoogle, SignIn} from './handleSignUp'
 import {   getFirestore, setDoc, doc, Firestore} from 'firebase/firestore'
 import {
     createUserWithEmailAndPassword,
     signInWithPopup,
-
     signOut,
 } from "firebase/auth";
 import { useData } from "../../context/data";
 
-// import {logOut, signInWithGoogle, SignIn} from './handleSignUp'
-const {data} = useData()
 
 function LoginPage() {
+    let { data, setData } = useData()
     const [isLoginMode, setIsLoginMode] = useState(true);
     const style = {
         color: "#0060ff",

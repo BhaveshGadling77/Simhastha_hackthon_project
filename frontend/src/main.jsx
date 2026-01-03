@@ -12,6 +12,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Settings from "./components/DashBoard/Settings/settings.jsx";
 import SignOut from "./components/DashBoard/SignOut/signout.jsx";
 import DashBoardLayout from "./dashBoardLayout.jsx";
+import { DataProvider } from "./context/data.jsx";
 import HealthCenters from "./components/DashBoard/HealthCenters.jsx";
 import RestRooms from "./components/DashBoard/RestRooms.jsx";
 const Router = createBrowserRouter([
@@ -66,6 +67,8 @@ const Router = createBrowserRouter([
 ]);
 createRoot(document.getElementById("root")).render(
     <StrictMode>
-        <RouterProvider router={Router} />
+        <DataProvider>
+            <RouterProvider router={Router} />
+        </DataProvider>
     </StrictMode>
 );
